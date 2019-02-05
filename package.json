@@ -1,0 +1,57 @@
+{
+  "name": "idor-checker",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "test": "nyc mocha --require @babel/polyfill --require @babel/register \"test/**/*.spec.js\"",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "author": "kawoka",
+  "repository": "https://github.com/kawoka/idor-checker",
+  "typings": "./index.d.ts",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-transform-arrow-functions": "^7.2.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/register": "^7.0.0",
+    "@webpack-cli/init": "^0.1.2",
+    "acorn": "^6.0.4",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "case-sensitive-paths-webpack-plugin": "^2.1.2",
+    "codecov": "^3.1.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.10.0",
+    "eslint-loader": "^2.1.1",
+    "expect": "^23.6.0",
+    "expect.js": "^0.3.1",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-merge": "^4.1.5"
+  },
+  "dependencies": {},
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-arrow-functions"
+    ]
+  },
+  "nyc": {
+    "include": [
+      "lib/**/*.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ]
+  }
+}
