@@ -7,7 +7,10 @@ const { env } = require('process')
 
 module.exports = merge(sharedConfig, {
   mode: 'production',
-  entry: './lib/devtools.js',
+  entry: {
+    devtools: './lib/devtools.js',
+    popup: './lib/popup.js'
+  },
   output: {
     filename: '[name].js',
     path:  path.join(__dirname, 'extension', 'dist')
