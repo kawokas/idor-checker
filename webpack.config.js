@@ -9,7 +9,8 @@ module.exports = merge(sharedConfig, {
   mode: 'production',
   entry: {
     devtools: './lib/devtools.js',
-    popup: './lib/popup.js'
+    popup: './lib/popup.js',
+    options: './lib/options.js'
   },
   output: {
     filename: '[name].js',

@@ -6,5 +6,7 @@
     "globals": {
         "chrome": false
     },
-    "rules": {}
+    "rules": {
+      "no-console": 0
+    }
 }
